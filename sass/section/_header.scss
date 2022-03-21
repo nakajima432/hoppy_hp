@@ -1,0 +1,50 @@
+/****************************
+    ヘッダー
+****************************/
+
+@use "../foundation" as f;
+
+.header {
+  padding: 40px 60px 30px;
+  @include f.md {
+    padding: 15px 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    /* ヘッダーロゴ hoppy film */
+    font-family: "Skranji", cursive;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: f.$c-main;
+    @include f.md {
+      font-size: 24px;
+    }
+  }
+}
+
+/* グローバルナビゲーション */
+.gnav {
+  @include f.md {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: f.$c-main;
+    margin-left: 55px;
+  }
+}

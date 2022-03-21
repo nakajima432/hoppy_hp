@@ -1,0 +1,131 @@
+/****************************
+    商品  product
+****************************/
+
+@use "../foundation" as f;
+
+.product {
+  margin-top: 110px;
+  padding-top: 50px;
+  @include f.tab {
+    margin-top: 70px;
+  }
+  @include f.md {
+    padding-top: 30px;
+  }
+  @include f.sp {
+    margin-top: 40px;
+  }
+}
+
+/* フィルム貼り直し説明 */
+.filmRedo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 0 60px;
+  @include f.md {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  &__textArea {
+    text-align: center;
+    margin-right: 70px;
+    letter-spacing: 0.04em;
+    @include f.md {
+      margin-right: 0;
+    }
+  }
+
+  &__headline {
+    font-size: 30px;
+    @include f.md {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-top: 50px;
+    @include f.md {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+  }
+
+  &__img {
+    max-width: 392px;
+    @include f.md {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* フィルム効果説明 */
+.filmEffect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 70px 60px;
+  background-color: #efefef;
+  @include f.tab {
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 50px 20px;
+  }
+  @include f.md {
+    margin-top: 30px;
+  }
+
+  &__textArea {
+    width: 27%;
+    margin-right: 80px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    @include f.tab {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__headline {
+    font-size: 32px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #000;
+    @include f.tab {
+      display: inline-block;
+    }
+    @include f.md {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    width: 95%;
+    font-size: 20px;
+    margin: 0 auto;
+    @include f.tab {
+      margin: 40px auto;
+    }
+    
+    p {
+      margin-top: 40px;
+      text-align: left;
+      @include f.tab {
+        margin: 0;
+        text-align: center;
+      }
+      @include f.md {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 640px;
+  }
+}

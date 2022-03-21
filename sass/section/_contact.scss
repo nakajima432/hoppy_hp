@@ -1,0 +1,91 @@
+/****************************
+    お問い合わせ  contact
+****************************/
+
+@use "../foundation" as f;
+
+.contact {
+  margin-top: 100px;
+  background-color: f.$c-main;
+  padding: 70px 200px 100px;
+  @include f.tab {
+    margin-top: 70px;
+    padding: 70px 100px 80px;
+  }
+  @include f.md {
+    padding: 70px 70px 80px;
+  }
+  @include f.sp {
+    margin-top: 40px;
+    padding: 30px 20px 50px;
+  }
+}
+
+/* コンタクトフォーム */
+.form {
+  margin-top: 75px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  &__label {
+    color: f.$c-base;
+    font-size: 20px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    margin-left: 26px;
+    @include f.sp {
+      font-size: 16px;
+      margin-bottom: 5px;
+      margin-left: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background: f.$c-base;
+    height: 40px;
+    padding: 0 16px;
+    font-family: "Noto Sans JP";
+    letter-spacing: 0.1em;
+  }
+
+  &__textarea {
+    width: 100%;
+    background: f.$c-base;
+    height: 350px;
+    padding: 16px;
+    font-family: "Noto Sans JP";
+    letter-spacing: 0.1em;
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 140px;
+    @include f.md {
+      margin-top: 70px;
+    }
+  }
+
+  &__submit {
+    /* フォーム送信ボタン */
+    width: 264px;
+    padding: 10px;
+    background: f.$c-base;
+    color: f.$c-main;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+    @include f.sp {
+      font-size: 16px;
+      padding: 8px;
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

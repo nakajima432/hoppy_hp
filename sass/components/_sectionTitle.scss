@@ -1,0 +1,67 @@
+/****************************
+    セクションのタイトル
+****************************/
+
+@use "../foundation" as f;
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__en {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    @include f.md {
+      font-size: 24px;
+    }
+  }
+
+  &__jp {
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    @include f.md {
+      font-size: 18px;
+    }
+  }
+}
+
+/* 背景白のタイトル */
+.sectionTitle--black {
+  color: #000;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 288px;
+    height: 4px;
+    transform: translateX(-50%);
+    background-color: f.$c-main;    
+    @include f.md {
+      width: 260px;
+    }
+  }
+}
+
+/* 背景オレンジのタイトル */
+.sectionTitle--white {
+  color: f.$c-base;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 288px;
+    height: 4px;
+    transform: translateX(-50%);
+    background-color: f.$c-base;
+    @include f.md {
+      width: 260px;
+    }
+  }
+}

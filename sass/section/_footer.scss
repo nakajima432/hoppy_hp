@@ -1,0 +1,26 @@
+/****************************
+    フッター
+****************************/
+
+@use "../foundation" as f;
+
+.footer {
+  background: #000;
+  text-align: center;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  &__logo {
+    font-family: "Skranji", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    color: f.$c-base;
+    padding: 12px;
+    @include f.md {
+      font-size: 16px;
+      padding: 8;
+    }
+  }
+}

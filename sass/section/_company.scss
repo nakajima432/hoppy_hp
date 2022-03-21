@@ -1,0 +1,86 @@
+/****************************
+    会社概要  company
+****************************/
+
+@use "../foundation" as f;
+
+.company {
+  margin-top: 110px;
+  padding-top: 50px;
+  @include f.tab {
+    margin-top: 70px;
+  }
+  @include f.md {
+    padding-top: 30px;
+  }
+  @include f.sp {
+    margin-top: 40px;
+  }
+}
+
+/* 会社概要一覧 */
+.companyList {
+  padding: 100px 60px 150px;
+  margin: 0 auto;
+  @include f.md {
+    padding: 70px 20px 100px;
+  }
+
+  &__item {
+    max-width: 752px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.16em;
+    @include f.sp {
+      display: block;
+    }
+  }
+
+  &__term {
+    /* 用語dt */
+    flex: 0 0 150px;
+    padding: 30px 0;
+    text-align: center;
+    background: f.$c-main;
+    color: f.$c-base;
+    font-size: 20px;
+    border-bottom: 1px solid #c9caca;
+    &--last {
+      border-bottom: none;
+    }
+    @include f.sp {
+      flex: 0 0 100px;
+      padding: 8px 16px;
+      font-size: 16px;
+      text-align: left;
+      border-bottom: none;
+    }
+  }
+
+  &__description {
+    /* 説明dd */
+    width: 80%;
+    padding: 30px 30px 30px 50px;
+    font-family: "Noto Sans JP";
+    font-weight: normal;
+    font-size: 20px;
+    border: 1px solid f.$c-main;
+    border-bottom: none;
+    &--last {
+      border-bottom: 1px solid f.$c-main;
+      padding-bottom: 28px;
+    }
+    @include f.sp {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      &--last {
+        padding-bottom: 24px;
+        @include f.sp {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+}

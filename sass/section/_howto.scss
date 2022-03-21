@@ -1,0 +1,118 @@
+/****************************
+    フィルムの貼り方 howto
+****************************/
+
+@use "../foundation" as f;
+
+.howto {
+  margin-top: 110px;
+  padding-top: 50px;
+  @include f.tab {
+    margin-top: 70px;
+  }
+  @include f.md {
+    padding-top: 30px;
+  }
+  @include f.sp {
+    margin-top: 40px;
+  }
+
+  &__list {
+/* howtoカード一覧レイアウト */
+    padding: 100px 60px 0;
+    display: flex;
+    width: 100%;
+    gap: 56px;
+    @include f.tab {
+      display: block;
+      padding: 70px 60px 0;
+    }
+    @include f.md {
+      padding: 50px 20px 0;
+    }
+  }
+}
+
+/* howtoのカード部分 */
+.howtoItem {
+  display: flex;
+  flex-direction: column;
+  color: f.$c-base;
+  width: calc(100% / 4 - 56px * 3 / 4);
+  @include f.tab {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 30px;
+  }
+  @include f.sp {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  &__img {
+    aspect-ratio: 3 / 2;
+    position: relative;
+    @include f.tab {
+      width: 30%;
+    }
+    @include f.sp {
+      width: 100%;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__textContainer {
+    background : linear-gradient(180deg, rgba(250, 202, 148, 1) 0%, rgba(242, 148, 42, 1) 100%);
+    flex-grow: 1;
+    @include f.tab {
+      border-left: 2px solid #fff;
+      flex: 1;
+    }
+    @include f.sp {
+      border-left: none;
+    }
+  }
+
+
+  &__step {
+    font-family: "Noto Sans JP";
+    text-align: center;
+    padding-top: 15px;
+    font-size: 26px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    position: relative;
+    @include f.md {
+      font-size: 22px;
+      padding-top: 12px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 120px;
+      height: 2px;
+      transform: translateX(-50%);
+      background-color: f.$c-base;
+    }
+  }
+
+  &__text {
+    padding: 26px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    @include f.md {
+      font-size: 12px;
+      padding: 12px;
+    }
+  }
+}
